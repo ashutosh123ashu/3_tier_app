@@ -1,7 +1,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: frontend-Deployment
+  name: frontend-deployment
   namespace: chat-app
 spec:
   replicas: 2
@@ -24,6 +24,4 @@ spec:
         - containerPort: 80
         env: 
         - name: NODE_ENV
-        value: production
-
-    
+          value: production
