@@ -8,22 +8,22 @@ metadata:
     nginix.ingress.kubernetes.io/ssl-redirect: "false"
   labels:
     app.kubernetes.io/name: chatapp-ingress
-  spec:
-    rules:
-    - host: chatapp.com
-      http: 
-        paths: 
-        - pathType: Prefix
-          path: "/"
-          backend: 
-            service:
-              name: frontend
-              port: 
-                number: 80
-        - pathType: Prefix
-          path: "/api"
-          backend: 
-            service:
-              name: backend
-              port: 
-                number: 5001
+spec:
+  rules:
+  - host: chatapp.com
+    http: 
+      paths: 
+      - pathType: Prefix
+        path: "/"
+        backend: 
+          service:
+            name: frontend
+            port: 
+              number: 80
+      - pathType: Prefix
+        path: "/api"
+        backend: 
+          service:
+            name: backend
+            port: 
+              number: 5001
